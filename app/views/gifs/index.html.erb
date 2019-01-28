@@ -1,4 +1,6 @@
 <h1>Listing Gifs</h1>
+
+<%= link_to 'Add new Pangolin gif', new_gif_path %>
  
 <% @gifs.each do |gif| %>
     <h2><%= gif.description %></h2>
