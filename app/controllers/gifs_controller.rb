@@ -35,6 +35,13 @@ class GifsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@gif = Gif.find(params[:id])
+		@gif.destroy
+
+		redirect_to gifs_path
+	end
+
 	private
 		def gif_params
 			params.require(:gif).permit(:description, :url)
