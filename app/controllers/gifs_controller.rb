@@ -8,7 +8,7 @@ class GifsController < ApplicationController
 	end	
 
 	def new
-		@article = Gif.new
+		@gif = Gif.new
 	end
 
 	def edit
