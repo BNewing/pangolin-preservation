@@ -13,8 +13,11 @@ class GifsController < ApplicationController
 	def create
 		@gif = Gif.new(gif_params)
 
-		@gif.save
-		redirect_to @gif
+		if @gif.save
+			redirect_to @gif
+		else 
+			render 'new'
+		end
 	end
 
 	private

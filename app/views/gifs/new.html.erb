@@ -1,6 +1,18 @@
 <h1>New Gif</h1>
 
 <%= form_with scope: :gif, url: gifs_path, local: true do |form| %>
+  <% if @gif.errors.any? %>
+    <div id="error_explanation">
+      <h2>There was an error</h2>
+      <p><%= pluralize(@gif.errors.count, "error") %> prohibited this gif from being saved:</p>
+      <ul>
+        <% @gif.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p>
     <%= form.label :description %><br>
     <%= form.text_field :description %>
