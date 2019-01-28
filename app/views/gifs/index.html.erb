@@ -1,0 +1,9 @@
+<h1>Listing Gifs</h1>
+ 
+<% @gifs.each do |gif| %>
+    <h2><%= gif.description %></h2>
+    <img src="<%= gif.url %>" alt="<%= gif.description %>"/>
+    <p><%= link_to 'Show', gif_path(gif) %></p>
+<% end %>
+
+
