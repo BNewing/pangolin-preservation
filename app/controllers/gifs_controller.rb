@@ -8,6 +8,11 @@ class GifsController < ApplicationController
 	end	
 
 	def new
+		@article = Gif.new
+	end
+
+	def edit
+		@gif = Gif.find(params[:id])
 	end
 
 	def create
@@ -17,6 +22,16 @@ class GifsController < ApplicationController
 			redirect_to @gif
 		else 
 			render 'new'
+		end
+	end
+
+	def update
+		@gif = Gif.find(params[:id])
+
+		if @gif.update(gif_params)
+			redirect_to @gif
+		else
+			render 'edit'
 		end
 	end
 

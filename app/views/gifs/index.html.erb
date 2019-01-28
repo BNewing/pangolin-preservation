@@ -6,6 +6,7 @@
     <h2><%= gif.description %></h2>
     <img src="<%= gif.url %>" alt="<%= gif.description %>"/>
     <p><%= link_to 'Show', gif_path(gif) %></p>
+    <p><%= link_to 'Edit', edit_gif_path(gif) %></p>
 <% end %>
 
 
