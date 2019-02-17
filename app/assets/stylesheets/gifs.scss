@@ -1,3 +1,27 @@
 // Place all the styles related to the Gifs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$peach-yellow: #F7E3AF;
+$lemon-meingue: #F3EEC3;
+$light-salmon-pink: #F7AF9D;
+$pastel-blue: #B0D0D3;
+$lavender: #C08497; 
+
+
+.pangolin-gif {
+	display: inline-block;
+	max-width: 20rem;
+}
+
+.pangolin-gif__image {
+	max-width: 100%;
+}
+
+.pangolin-gif__button {
+	background-color: $pastel-blue;
+	padding: 0.5rem 1rem;
+	margin: 1rem 0.5rem;
+	border-radius: 0.25rem;
+	border: 1px solid black;
+	display: inline-block;
+}

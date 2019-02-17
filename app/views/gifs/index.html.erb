@@ -2,14 +2,18 @@
 
 <%= link_to 'Add new Pangolin gif', new_gif_path %>
  
-<% @gifs.each do |gif| %>
-    <h2><%= gif.description %></h2>
-    <img src="<%= gif.url %>" alt="<%= gif.description %>"/>
-    <p><%= link_to 'Show', gif_path(gif) %></p>
-    <p><%= link_to 'Edit', edit_gif_path(gif) %></p>
-    <p><%= link_to 'Destroy', gif_path(gif),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></p>
-<% end %>
+<div>
+	<% @gifs.each do |gif| %>
+	  <article class="pangolin-gif">
+	    <h2><%= gif.description %></h2>
+	    <img class="pangolin-gif__image" src="<%= gif.url %>" alt="<%= gif.description %>"/>
+	    <%= link_to 'View', gif_path(gif), class: "pangolin-gif__button"%>
+	    <%= link_to 'Edit', edit_gif_path(gif), class: "pangolin-gif__button"%>
+	    <%= link_to 'Delete', gif_path(gif),
+	              method: :delete,
+	              data: { confirm: 'Are you sure?' }, class: "pangolin-gif__button" %>
+	  </article>
+	<% end %>
+</div>
 
 

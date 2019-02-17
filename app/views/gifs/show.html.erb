@@ -1,12 +1,14 @@
-<h1>Pangolin Gifs</h1>
+<article class="pangolin-gif">
+	<h1>Pangolin Gifs</h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @gif.description %>
-</p>
- 
-<p>
-  <img src="<%= @gif.url %>" alt="<%= @gif.description %>"/>
-</p>
+	<p>
+	  <strong>Description:</strong>
+	  <%= @gif.description %>
+	</p>
+	 
+	<p>
+	  <img class="pangolin-gif__image" src="<%= @gif.url %>" alt="<%= @gif.description %>"/>
+	</p>
 
-<%= link_to 'View all gifs', gifs_path %>
+	<%= link_to 'View all gifs', gifs_path %>
+</article>
